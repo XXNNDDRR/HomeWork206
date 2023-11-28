@@ -12,8 +12,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    let userName = "King"
-    let userPassword = "12345"
+    private let userName = "King"
+    private let userPassword = "12345"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,10 @@ final class LoginViewController: UIViewController {
         showAlert(title: "Ой", message: "Ваш пароль \(userPassword)")
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameField.text = nil
+        passwordField.text = nil
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
