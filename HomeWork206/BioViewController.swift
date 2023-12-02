@@ -1,10 +1,3 @@
-//
-//  BioViewController.swift
-//  HomeWork206
-//
-//  Created by Alexander on 02.12.2023.
-//
-
 import UIKit
 
 final class BioViewController: UIViewController {
