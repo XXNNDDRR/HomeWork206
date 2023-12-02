@@ -9,7 +9,7 @@ struct User {
         User(
             login: "King",
             password: "12345",
-            person: Person(name: "Alex", surname: "Go")
+            person: Person.getPersonData()
         )
     }
 }
@@ -17,6 +17,27 @@ struct User {
 struct Person {
     let name: String
     let surname: String
+    let age: String
+    let work: String
+    let bio: Bio
+        
+    static func getPersonData() -> Person {
+        Person(
+            name: "Alex",
+            surname: "Go",
+            age: "40",
+            work: "RANEPA",
+            bio: Bio.getBioData()
+        )
+    }
+}
+
+struct Bio {
+    let bio: String
     
-    var fullName: String {"\(name) \(surname)"}
+    static func getBioData() -> Bio {
+        Bio(
+            bio: "Я, просто Я!"
+        )
+    }
 }
